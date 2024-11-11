@@ -1,0 +1,52 @@
+\documentclass[a4paper,10pt,twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{geometry}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{refs.bib}
+\graphicspath{ {./images/} }
+\geometry{
+	left=20mm,
+	right=15mm,
+	top=20mm,
+	bottom=15mm,
+	heightrounded,
+	}
+\setlength{\parindent}{0.5cm}
+\setcounter{secnumdepth}{3}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\newcommand*{\thead}[1]{\multicolumn{1}{|c|}{\bfseries #1}}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\begin{document}
+
+\author{Avijit Naskar}
+\title{CS101: All in one book for Competitive Exam}
+\date{January 2025}
+
+\frontmatter
+\maketitle
+\tableofcontents
+\mainmatter
+\include{./TeX_files/DiscreteMathematics}
+\include{./TeX_files/Algorithms}
+\include{./TeX_files/ProgrammingLanguages}
+\include{./TeX_files/DigitalLogic}
+\include{./TeX_files/ComputerOrganizationArchitecture}
+\include{./TeX_files/TheoryOfComputation}
+\include{./TeX_files/CompilerDesign}
+\include{./TeX_files/OperatingSystem}
+\include{./TeX_files/ComputerNetworking}
+\include{./TeX_files/DatabaseDesign}
+\include{./TeX_files/EmergingTechnologies}
+\include{./TeX_files/Appendix}
+\backmatter
+\printbibliography
+\end{document}

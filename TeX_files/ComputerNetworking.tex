@@ -1,0 +1,178 @@
+\part{Computer Networking}
+\chapter{Introduction to computer Networks}
+\section{Problems associated with Computer Networks}
+\subsection{Communication}
+\paragraph{Protocols}
+Protocol is set of rules that govern data communications.\\
+\indent \textbf{Syntax:} The term refers to the structure or format of the data, meaning the order in which they are presented.\\
+\indent \textbf{Semantics:} The term refers to the meaning of each section of bits. How are a particular pattern to be interpreted, and what action is to be taken based on that interpretation?\\
+\indent \textbf{Timing:} The term refers to two characteristics: a) When data should be sent b) How fast they can be sent.
+\subparagraph{HTTP} (\textbf{Hyper Text Transfer Protocol}) Used for browser requesting resources from a server. Available versions are: 1.0 (\textit{RFC 1945}), 2.0 (\textit{RFC 7540}). Methods available are: GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH etc. Port used: 80 and 443 (secure). This is a TCP protocol.
+\subparagraph{SMTP} (\textbf{Simple Mail Transfer Protocol}) Used for Delivering mails to servers. Available in \textit{(RFC 821)}. Available methods are: HELO, MAIL, RCPT, SEND, DATA, VRFY, AUTH, RSET, QUIT etc. Port used: 25. This is a TCP protocol.
+\subparagraph{FTP} (\textbf{File Transfer Protocol}) Used for downloading or uploading file from or to server. Available in \textit{(RFC 959)}. Available methods are the common file handling commands of UNIX system. Port used: 20/21. This is a TCP protocol.
+\subparagraph{POP} (\textbf{Post Office Protocol}) Client connect, retrieve, store them and finally delete them from server. Available in POP \textit{(RFC 918)}, POP3 \textit{(RFC 1081)}. Available methods are: USER, PASS, QUIT, STAT, RETR, DELE, RSET etc. Port used: 110 and 995 (secure).
+\subparagraph{IMAP} (\textbf{Internet Message Access Protocol}) Used for complete management of mailbox. User can download a message using different clients and keep a copy on the server until explicitly deleted. Available in \textit{(RFC 3501)}. Available methods are: APPEND, CHECK, SEARCH, SELECT, STORE etc. Port used: 143 and 993 (secure).
+\subparagraph{TELNET} (\textbf{TELetype NETwork}) Provides a bidirectional interactive text-oriented communication facility. Available in \textit{(RFC 15)}. Available methods are: CLOSE, DISPLAY, OPEN, SET, SEND, STATUS, UNSET, QUIT etc. Port used: 23. This is a TCP protocol.
+\subsection{Identification}
+To send packets from source to destination we need to identify systems. Two types of addressing are used for this: a) Logical address (IP) and b) Physical addressing (MAC)
+\paragraph{IP Address}
+\subparagraph{Characteristics of IP address}
+\subparagraph{Classification of IP address\\}
+
+\begin{tabular}{|p{2em}|p{2em}|p{3em}|p{8em}|p{10em}|}
+	\hline IP Class & NID-HID & Starting bits & Range & Area of usage \\
+	\hline A & 8-24 & 0 & 1.0.0.1 to 126.255.255.255 & Defense, Govt organizations etc.\\
+	\hline B & 16-16 & 10 & 128.0.0.1 to 191.255.255.255 & MNC, Banks, Big organizations etc.\\
+	\hline C & 24-8 & 110 & 192.0.0.1 to 223.255.255.255 &  etc.\\
+	\hline D & nil & 1110 & 224.0.0.1 to 239.255.255.255 & Used for multi-casting purposes\\
+	\hline E & nil & 11110 & 240.0.0.1 to 255.255.255.255 & Reserved for future uses\\
+	\hline
+\end{tabular}
+
+\subparagraph{Some special IP addresses} 
+\textbf{127.*.*.*} is reserved for  loop-back.
+\paragraph{MAC Address}
+\subsection{Connection}
+\paragraph{Types of Connections}
+\subparagraph{Uni-casting}
+When source is sending data to only one device.
+\subparagraph{Multi-casting}
+When source is sending data to multiple devices.
+\subparagraph{Broadcasting}:
+
+\textbf{Limited Broadcasting:} A packet is sent to a specific network or series of networks.
+
+\textbf{Directed Broadcasting:} A packet is sent to specific destination address.
+
+\textbf{Flooded Broadcasting:} A packet is sent to every network.
+\paragraph{Netting}
+\subparagraph{Subnetting}
+\subparagraph{Supernetting}
+\paragraph{Hardware Devices}
+\subparagraph{Repeater (PL)} It receives signals and either amplifies or regenerate it.
+\subparagraph{Hub (PL)} Passive Broadcasting device no s/w needed.
+\subparagraph{Bridge (PL, DL)} Connects multiple LAN segments (similar) or subnets 
+\subparagraph{Switch}
+\subparagraph{Router}
+\subparagraph{Gateway}
+\chapter{Layers of computer Networks}
+Here is a Cheat-sheet for Layers of OSI model:\\
+\begin{tabular}{|p{5em}|p{10em}|p{3em}|p{8em}|}
+	\hline Layer Name & Objectives & PDUs & Protocols\\
+	\hline Application Layer & Bla Bla & Bla & DNS, HTTP, FTP, DHCP, IMAP, LDAP, POP, RSTP, RIP, SMTP, SNMP, SSH, TelNet, SIP, TLS/SSL,\\
+	\hline Presentation Layer & Bla Bla & Bla & DNS, HTTP, FTP, DHCP, IMAP, LDAP, POP, RSTP, RIP, SMTP, SNMP, SSH, TelNet, SIP, TLS/SSL,\\
+	\hline Session Layer & Bla Bla & Bla & DNS, HTTP, FTP, DHCP, IMAP, LDAP, POP, RSTP, RIP, SMTP, SNMP, SSH, TelNet, SIP, TLS/SSL,\\
+	\hline Transportation Layer & Bla Bla & BLA & TCP, UDP, DCCP, SCTP, RSVP\\
+	\hline Network Layer & Bla Bla & BLA & IPv4, IPv6, IGMP, IPsec, ICMP\\
+	\hline Data Link Layer & Bla Bla & BLA & ARP, NDP, L2TP. PPP, DSL, ISDN, FDDI \\
+	\hline Physical Layer & Bla Bla & BLA & ARP, NDP, L2TP. PPP, DSL, ISDN, FDDI \\
+	\hline
+\end{tabular}
+\section{Application Layer}
+\section{Presentation Layer}
+\section{Session Layer}
+\section{Transport Layer}
+\section{Network Layer}
+\section{Data Link Layer}
+\subsection{Error Control}
+\textbf{Error:} During transmission when bits or signal gets changed, called error.\\
+\textbf{Single-bit Error:} When only one bit gets changed.\\
+\textbf{Burst Error:} When 2 or more bits get changed.
+\paragraph{Parity Checking} Adding redundant bits to the end of actual data, called parity bits. During sending of data the parity bits are calculated using XOR operation for even parity and XNOR for odd parity. In the receiving end they parity is calculated again if 0 then there is no error so remove the parity bits and accept data else reject and request again.
+\paragraph{Hamming Code} In this mechanism to get the final data we need to ind the parity bit of those which have 1's in $n^{th}$ position and add them to the $2^n$ position. The number of redundant bits needed are: $2^{n+1} > len(Code)$. On the receiving end recalculate the hamming code, if result is all 0's then accept the data, else alter the bit position of the result to get the error free data as it is a error detection and correction code. This can detect more than 1 bit error but cannot correct them.
+\paragraph{Cyclic Redundancy Check} To get the redundant bits, data is divided with a prime divisor. The remainder is added to the data. On the receiving end, the modified data is also divided by the same divisor. If remainder is 0 then accept the data, else reject the data.
+\paragraph{Checksum} Data are divided into same size segments with the help of padding, then summed together. The result is then inverted and send with the actual data. On the receiving end, the data received is again divided and summed up if resulted in 0 then data is correct else reject the data.
+\subsection{Data Link Control}
+\paragraph{Framing}  Helps to identify messages from different sources and destinations. It has three main parts: HEADER, containing control information, source and destination addresses, type of PDU, Control fields; DATA, contains content of the packets; TRAILER, contains error control bits, stop bits.
+\subparagraph{Character Oriented Framing} Data are sent in byte format.\\
+\indent \indent \textbf{Default structure:} Flag + Header + ... Data ... + Trailer + Flag\\
+\indent \indent \textbf{Byte Stuffed:} ESC bytes are added before every FLAG and ESC in the data. e.g. \textit{Flag + Header + ... ESC FLAG ... Data ... ESC ESC ... + Trailer + Flag}
+\subparagraph{Bit Oriented Framing}
+\indent \indent \textbf{Default structure:} Flag + Header + ... Data ... + Trailer + Flag\\
+\indent \indent \textbf{Bit Stuffed:} ESC bytes are added before every FLAG and ESC in the data. e.g. \textit{Flag + Header + ... ESC FLAG ... Data ... ESC ESC ... + Trailer + Flag}
+\subsection{Flow Control}
+\paragraph{Noiseless Channel}
+\paragraph{Noisy Channel}
+\subparagraph{Stop and wait protocol}
+\subparagraph{Go-back-N protocol}
+\subparagraph{Selective repeat protocol}
+$TransmissionDelay=\frac{FrameSize}{Bandwidth}$ $OptimalSenderWindowSize=1+2a=1+2*\frac{PropagationDelay}{TransmissionDelay}$ $min.SequenceNumberBits=\lceil log_2(OptimalSenderWindowSize+OptimalReceiverWindowSize)\rceil$
+\subsection{Access Control}
+\paragraph{Random Access Control}
+\paragraph{Controlled Access Control}
+\paragraph{Channelization Control}
+\section{Physical Layer}
+\subsection{Data and Signals}
+\paragraph{Signals}
+\subparagraph{Different Types of Signals}:\\
+\indent \textbf{Analog Signals} It includes an infinite number of values along its path.\\
+\indent \textbf{Digital Signals} It includes limited number of defined values along its path.\\
+\indent \textbf{Periodic Signals} It repeats patterns in a common time frame.\\
+\indent \textbf{Non-periodic Signals} It doesn't repeat any pattern.\\
+\indent \textbf{Analog Data} It refers to information that is continuous.\\
+\indent \textbf{Digital Data} It refers to information that is discrete in nature.\\
+(*) Periodic analog signals and non-periodic digital signals are commonly used.
+\subparagraph{Different Properties of Analog Signals}:\\
+\indent \textbf{Period and Frequency:} The time needed to complete 1 cycle is called period (T). Frequency (f) means to the number of periods in 1s. i.e. $ f=\frac{1}{T} $.\\
+\indent \textbf{Phase:} It denotes position of the signal relative to time 0. i.e. if $\frac{1}{C} $ is offset related to $time_0$ $d=360*\frac{1}{C}$.\\
+\indent \textbf{Wavelength:} The distance a signal travels before completing a cycle is called wave lengths. $wavelength = PropagationSpeed * period = \frac{PropagationSpeed}{frequency}$.\\
+\indent \textbf{Composite Signal:} Combination of different analog sine waves is called composite signal.\\
+\indent \textbf{Bandwidth:} The difference between highest and lowest frequency of a composite signal.\\
+\subparagraph{Different Properties of Digital Signals}:\\
+\indent \textbf{Bit rate:} The number of bits send per second is called bit rate.\\
+\indent \textbf{Bit Length:} Distance 1 bit occupies in the medium. i.e. $BitLength = PropagationSpeed * BitDuration$.
+\indent \textbf{Throughput:} How fast we can send data though network. If a channel carries F frames per second and B bits per frame then throughput T = F * B.\\
+\indent \textbf{Latency:} Total time taken to send first bit to entire message. Calculation: $Latency = PropagationTime + TransmissionTime + QueuingTime + ProcessingDelay;$
+$PropagationTime = \frac{Distance}{PropagationSpeed};$
+$TransmissionTime = \frac{MessageSize}{Bandwidth}$. \\
+\subparagraph{Anomalies during transmission}:\\
+\indent \textbf{Attenuation:} During traveling through medium signal loses its energy is called attenuation. Calculation: $dB=10log_{10}\frac{P_e}{P_s}$\\
+\indent \textbf{Distortion:} When signals changes its form or shape.\\
+\indent \textbf{Noise:} When impurities from outside of medium corrupts the signal is called noise. $SNR_{dB}=10log_{10}SNR=10log_{10} \frac{AvgSignalPower}{AvgNoisePower}$\\
+\paragraph{Transmission of Signals}
+\subparagraph{Conversions}
+\subparagraph{Transmission Modes}:\\
+\indent \textbf{Parallel Transmission:} n-wires send n-bits of data at same time mostly binary data 0 and 1. Normally used when distance is too short as it costs more.\\
+\indent \textbf{Serial Transmission:} Data are transmitted serially\\
+\indent \indent \textbf{Asynchronous:} Units of bits are send begin with start bit(0) and end with stop bits(1). Data bits are asynchronous at byte level.\\
+\indent \indent \textbf{Synchronous:} Data bits are combined and send as frames one after another and receiver has the job to separate those bits into groups.\\
+\subparagraph{Multiplexing} Bandwidth is shared if a medium got higher bandwidth than the needs of devices this technique is called multiplexing.\\
+\indent \textbf{Frequency Division Multiplexing:} An analog method is used to combine signals. Different frequencies are separated by the guard-bands to prevent overlapping.\\
+\indent \textbf{Time Division Multiplexing:} Data from different slow-rate devices are given a fixed time slots in round robin manner to achieve high-rate.\\
+\indent \textbf{Wave Division Multiplexing:} Designed for Optic Fiber, uses the technique of refraction.\\
+\subsection{Transmission Medium}
+\paragraph{Guided Media}
+\subparagraph{Twisted Pair Cable} A twisted pair of conductors each with own plastic insulation.
+\subparagraph{Co-axial Cable}  
+\subparagraph{Optic Fiber Cable}
+\paragraph{Unguided Media}
+\subparagraph{Radio wave}
+\subparagraph{Micro wave}
+\subparagraph{Infrared wave}
+\subsection{Switching}
+\paragraph{Circuit Switching} Switches connected through actual links and circuits. Reserve all the resources during transmission. Implemented in physical layer.
+\paragraph{Packet Switching} Data are arranged into packets and then send over network. Resources are allocated as they needed. Each switch has routing table.
+\subparagraph{Datagram Networks} Packets are sent independent of each other. Normally switching done in network layer and called connection-less. Each have a routing table contains destination address and output port.
+\subparagraph{Virtual Circuit Networks} During setup phase the path is selected, all packets follow same path to reach destination. Normally implemented in data-link layer and called connection-oriented. Routing table consists of incoming/outgoing ports/VCI.
+\chapter{Network Security}
+\chapter{Mobile Technologies}
+\chapter{Cloud Computing}
+\chapter{Not Sorted}
+\section{IP}
+To check an IP belongs to same network, do AND(.) operation between subnet mask and IP.\\
+\textbf{CIDR representation} is IP/C. To find the range do $N = 32-C$. Truncate last N bits to 0s for lowest IP and to 1s for highest IP and total IPs will be $2^N$.\\
+\textbf{CIDR aggregation:} 1) All IPs must be contiguous. 2) Calculate total IP addresses. 3) Aggregated CIDR will be IP/X where, $X = 32-log_2T$.\\
+\textbf{IP Fragmentation:} 1) Calculating $ActualTransmissionSize = MaximumTransmissionUnit - IPHeaderSize$ 2) Calculating $NumberOfSegments = \frac{TotalPacketSize}{ActualTransmissionSize} $ 3) Calculating $Offsets_i = \frac{ActualTransmissionSize}{8}*i  ;$ Initial offset is always 0.
+\textbf{Hamming Code:} 1) Calculating $Min.HammingDistance=min_1(XORofEachCodewords)$ 2) Calculating $Max.ErrorBits=\frac{Min.HammingDistance-1}{2}$
+\textbf{CSMA/CD:} 1) Calculating $RoundedTurnaroundTime = 2* PropagationDelay$ 2) Calculating $min.FrameSize = RoundedTurnaroundTime*Bandwidth$\\
+\textbf{DHCP (Dynamic Host Configuration Protocol):} Assign IP addresses automatically, Centralized, Works on port UDP 67 and 68, Application Layer protocol, Supports both IPv4 and IPv6, Sometimes behaves as router.\\
+\textbf{SLIP(SeriaL IP):} IP Encapsulation over Serial Ports, Replaced later by PPP, preferred for micricontrollers due to small overhead but not good for PCs.\\
+\textbf{SNMP (Simple Network Management Protocol):} Management and Monitoring of networks, Application layer protocol, Uses ports UDP 161 and 162.\\
+\textbf{IGMP(Internet Group Multi-casting Protocol):} Uses IPv4, manage by IP Encapsulation.\\
+\textbf{IGMP(Internet Control Message Protocol):} Uses IPv6, manage by Multi-cast Listener Discovery\\
+\textbf{ARP(Address Resolution Protocol):} Find out MAC address from IPv4, works on Layer 2 to 3, replaced by NDP in IPv6\\
+\textbf{RARP(Reverse Address Resolution Protocol):} Find out IP address from MAC, works on Layer 3 to 2, replaced by BOOTP7 then DHCP in IPv6\\
+\textbf{TCP congestion control:}
+\textbf{Slow start} size of the congestion window increased exponentially until threshold.
+\textbf{Congestion avoidance} size of the congestion window increased additively until threshold.
+\textbf{Congestion detection} size of the threshold dropped to half (multiplicative decrease).

@@ -1,0 +1,69 @@
+\part{Database Design}
+
+\chapter{Introduction}
+\section{Background}
+\paragraph{Data} are the known facts that can be recorded and that have implicit meaning
+\paragraph{Information}
+\paragraph{Database}
+
+\section{Database Architecture}
+\subsection{Terminologies}
+\begin{itemize}
+	\item \textbf{X}
+\end{itemize}
+\section{Database}
+
+\chapter{Relation Model}
+\section{Relation}
+\subsection{Terminologies}
+\begin{itemize}
+	\item \textbf{Relation} A relation is a table with columns and rows. (File)
+	\item \textbf{Tuple} A tuple is a row of a relation. (Record)
+	\item \textbf{Attribute} An attribute is a named column of a relation. (Field)
+	\item \textbf{Arity/Degree} Number of attributes of database table.
+	\item \textbf{Cardinality} Number of tuple of database table.
+	\item \textbf{Domain} A domain is the set of allowable values for one or more attributes.
+	\item \textbf{Base Relation} A named relation corresponding to an entity in the conceptual schema, whose tuples are physically stored in the database.
+	\item \textbf{View} The dynamic result that is provides a virtual relation that may or may not exists and produced upon users' request
+	\item \textbf{Relational database} A collection of normalized relations with distinct relation names
+	\item \textbf{Relational Schema} A named relation defined by a set of attribute and domain name pairs.
+	\item \textbf{Relational Database Schema} A set of relation schemas, each with a distinct name.
+	\item \textbf{Key} Attribute or set of attribute is called key.
+	\item \textbf{Super key} An attribute, or set of attributes, that uniquely identifies a tuple within a relation
+	\item \textbf{Candidate Key} A superkey such that no proper subset is a superkey within the relation. It has two properties \textit{Uniqueness}, \textit{Irreducibility}, For any RDBMS table there must be atleast one candidate key, whose field value can not be null..
+	\item \textbf{Overlapped Candidate Key}: Two or more candidate key with some common attribute.
+	\item \textbf{Compound Candidate Key}: A candidate key with atleast two attributes.
+	\item \textbf{Prime Attribute} the attributes that are part of a candidate key, a relation can have multiple candidate key but all may not contain same prime attribute.
+	\item \textbf{Non-prime attribute} the attribute that does not belongs to any of the candidate keys of the relation.
+	\item \textbf{Primary Key} A primary key is the candidate key chosen for use in identification of tuples
+	\item \textbf{Null} Represents a value for an attribute that is currently unknown or is not applicable for this tuple.
+	\item \textbf{Entity Integrity} In a base relation, no attribute of a primary key can be null.
+	\item \textbf{Referential integrity} If a foreign key exists in a relation, either the foreign key value must match a candidate key value of some tuple in its home relation or the foreign key value must be wholly null.
+	\item \textbf{Constrains} Additional rules specified by the users or database administrators of a database that define or constrain some aspect of the enterprise.
+\end{itemize}
+
+\section{E-R Model}
+\section{}
+\section{Query Language}
+
+\chapter{Database Analysis \& Design}
+\section{Modeling}
+\section{Normalization}
+\section{Query Processing}
+\section{Query Optimization}
+
+\chapter{Storage and Indexing}
+\section{Physical Storage Systems}
+\section{Data Structure}
+\subsection{File Organization}
+\section{Indexing}
+
+\chapter{Transaction Management}
+\section{Transactions}
+\section{Concurrency}
+\section{Recovery}
+
+\chapter{Special Databases}
+\section{Distributed Database}
+\section{Semi-structured Database}
+\section{Blockchain Database}
